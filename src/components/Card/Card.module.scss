@@ -1,0 +1,22 @@
+@import "../../main";
+
+.card {
+  background-color: #fff;
+  margin-top: 1rem;
+  width: calc(50% - 0.5rem);
+  padding: 1.5rem;
+  @include borderStyle($cardBorder);
+
+  .cardHeader {
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+
+  .cardBody {
+    margin-top: 1.5rem;
+
+    & > ul > li {
+      margin: 0.5rem 0;
+    }
+  }
+}

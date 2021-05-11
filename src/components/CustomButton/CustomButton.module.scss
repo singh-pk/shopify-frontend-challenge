@@ -1,0 +1,21 @@
+@import '../../main';
+
+.customBtn {
+  padding: 0.4rem 0.8rem;
+  background-color: #fafafa;
+  @include borderStyle;
+  margin-left: 0.5rem;
+
+  &:hover {
+    background-color: #f3f3f3;
+    cursor: pointer;
+  }
+
+  &:disabled {
+    pointer-events: none;
+
+    &::after {
+      content: 'd';
+    }
+  }
+}

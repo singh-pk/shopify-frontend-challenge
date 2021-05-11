@@ -1,0 +1,66 @@
+@import "../../main";
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modalBody {
+    @include borderStyle($cardBorder);
+    height: 8rem;
+    background-color: #fff;
+    position: absolute;
+    margin: 2rem;
+    animation: modal 0.3s ease-in;
+
+    @keyframes modal {
+      0% {
+        top: 0;
+      }
+      25% {
+        top: 10%;
+      }
+      50% {
+        top: 20%;
+      }
+      75% {
+        top: 30%;
+      }
+      100% {
+        top: 35%;
+      }
+    }
+
+    .modalBtnCloseContainer {
+      padding: 0.5rem 1rem;
+      position: absolute;
+      right: 0.5rem;
+      cursor: pointer;
+
+      .modalBtnClose {
+        height: 1.5rem;
+        @include btnCloseStyle(45deg);
+
+        &::before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          @include btnCloseStyle(90deg);
+        }
+      }
+    }
+
+    .text {
+      margin-top: calc(1rem + 1.5rem);
+      padding: 1rem;
+      font-size: 1.2rem;
+    }
+  }
+}

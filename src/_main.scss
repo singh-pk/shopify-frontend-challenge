@@ -1,0 +1,20 @@
+$app-background-color: #f1f1f1;
+
+$borderRadius: 0.3rem;
+
+$primaryBorder: 1.4px solid #d8d8d8;
+
+$cardBorder: 1.4px solid #e0dfdf;
+
+$spinnerColor: #7164ff;
+
+@mixin borderStyle($border: $primaryBorder) {
+  border: $border;
+  border-radius: $borderRadius;
+}
+
+@mixin btnCloseStyle($deg) {
+  border: 0.2px solid #000;
+  background-color: #000;
+  transform: rotate($deg);
+}

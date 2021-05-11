@@ -1,0 +1,9 @@
+.homepage {
+  padding: 10vh 10vw;
+
+  .homepageCards {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}

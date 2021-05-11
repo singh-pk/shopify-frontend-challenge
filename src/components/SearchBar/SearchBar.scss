@@ -1,0 +1,35 @@
+@import '../../main';
+
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 1rem;
+  @include borderStyle($cardBorder);
+
+  & > label {
+    margin-bottom: 0.5rem;
+  }
+
+  .input {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    padding: 0.2rem;
+    @include borderStyle;
+
+    & > svg {
+      height: 80%;
+      margin: 0 0.5rem;
+    }
+
+    & > input {
+      height: 100%;
+      width: 100%;
+      border: none;
+      outline: none;
+      padding: unset;
+      font-size: 1.1rem;
+    }
+  }
+}
